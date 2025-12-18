@@ -1,0 +1,99 @@
+*{
+    padding: 0%;
+    margin: 0%; 
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+#header{
+    width: 100%;
+    height: 10%;
+    background: #081b31;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    /* background: pink; */
+    border-radius: 50%;
+    display: flex;
+    margin-top: 70px;
+    margin-left: 40px;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+img{
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#rock{
+    background: palevioletred;
+}
+
+#paper{
+    background: rgb(199, 54, 199);
+}
+
+#scissor{
+    background: skyblue;
+}
+
+.score-board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    font-size: 2rem;
+    gap: 20rem;
+}
+
+#user-score, #comp-score{
+    font-size: 4rem;
+}
+
+.msg-container{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#msg{
+    margin-top: 50px;
+    font-size: 2rem;
+    background: #081b31;
+    color: white;
+    padding: 12px;
+    border-radius: 1rem;
+}
