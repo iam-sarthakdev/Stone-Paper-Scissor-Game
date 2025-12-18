@@ -1,7 +1,7 @@
 let userScore = 0;
 let compScore = 0;
 
-const choices = document.querySelectorAll(".circle");
+const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 
 const userScorePara = document.querySelector("#user-score");
@@ -15,7 +15,7 @@ const genCompChoice = () => {
 
 const drawGame = () => {
   msg.innerText = "Game was Draw. Play again.";
-  msg.style.backgroundColor = "#081b31";
+  msg.className = "draw"; // Apply CSS class
 };
 
 const showWinner = (userWin, userChoice, compChoice) => {
@@ -23,12 +23,12 @@ const showWinner = (userWin, userChoice, compChoice) => {
     userScore++;
     userScorePara.innerText = userScore;
     msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
-    msg.style.backgroundColor = "darkgreen";
+    msg.className = "win"; // Apply CSS class
   } else {
     compScore++;
     compScorePara.innerText = compScore;
     msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
-    msg.style.backgroundColor = "red";
+    msg.className = "lose"; // Apply CSS class
   }
 };
 
@@ -57,6 +57,11 @@ const playGame = (userChoice) => {
 
 choices.forEach((choice) => {
   choice.addEventListener("click", () => {
+    // With the new HTML structure, clicks might land on inner elements.
+    // .closest('.choice') ensures we get the parent container with the ID.
+    // However, since we added the listener to the .choice element itself,
+    // 'choice' variable refers to that element, so .getAttribute("id") works fine
+    // as long as we use the variable from the closure.
     const userChoice = choice.getAttribute("id");
     playGame(userChoice);
   });
