@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor</title>
+    <title>Rock Paper Scissors</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div id="header">
-            <h1>Rock Paper Scissor</h1>
-        </div>
-        <div id="main">
-        <div class="circle" id="rock"><img src="./images/rock.png" alt=""></div>
-        <div class="circle" id="paper"><img src= "./images/paper.png"></div>
-        <div class="circle" id="scissor"><img src="./images/scissors.png" alt=""></div>
-        </div>
-        <div class="score-board">
-            <div class="score">
-                <p id="user-score">0</p>
-                <p>You</p>
+    <div class="app-wrapper">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+
+        <main>
+            <div class="choices-container">
+                <div class="choice" id="rock">
+                    <div class="choice-inner">
+                        <img src="./images/rock.png" alt="Rock">
+                    </div>
+                </div>
+                <div class="choice" id="paper">
+                    <div class="choice-inner">
+                        <img src="./images/paper.png" alt="Paper">
+                    </div>
+                </div>
+                <div class="choice" id="scissor">
+                    <div class="choice-inner">
+                        <img src="./images/scissors.png" alt="Scissors">
+                    </div>
+                </div>
             </div>
-            <div class="score">
-                <p id="comp-score">0</p>
-                <p>Computer</p>
+
+            <div class="msg-container">
+                <p id="msg">Play Your Move</p>
             </div>
-        </div>
-        <div class="msg-container">
-            <p id="msg">Play Your Move</p>
-        </div>
+
+            <div class="score-board">
+                <div class="score-card">
+                    <p class="score-label">You</p>
+                    <p id="user-score" class="score-value">0</p>
+                </div>
+                <div class="score-card">
+                    <p class="score-label">Computer</p>
+                    <p id="comp-score" class="score-value">0</p>
+                </div>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
