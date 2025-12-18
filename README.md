@@ -20,7 +20,7 @@ A simple **Rock Paper Scissors** game built using **HTML, CSS, and JavaScript**.
 - Basic UI state management
 
 ## 🔹 Live Demo
-👉 https://<your-username>.github.io/rock-paper-scissors/
+👉 https://iam-sarthakdev.github.io/Stone-Paper-Scissor-Game/
 
 ## 🔹 Screenshots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04f596c3-b2d8-4988-acae-b664086fff26" />
